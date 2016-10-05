@@ -152,7 +152,7 @@ module.exports = function Dimensions ({
 
       render () {
         const {containerWidth, containerHeight} = this.state
-        if (!containerWidth && !containerHeight) {
+        if (this.refs.container && !containerWidth && !containerHeight) {
           console.warn('Wrapper div has no height or width, try overriding style with `containerStyle` option')
         }
         return (
